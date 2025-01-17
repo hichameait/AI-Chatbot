@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CHat Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <div class="chatbot-popup">
+        <div class="chat-header">
+            <div class="header-info">
+                <box-icon type='solid' name='face'></box-icon>
+                <h2 class="logo-text">Chatbot</h2>
+            </div>
+            <button class="material-symbols-rounded">
+                keyboard_arrow_down
+                </button>
+        </div>
+    </div>
+
+    <div class="chat-body">
+        <div class="message bot-message">
+            <box-icon type='solid' name='face'></box-icon>
+            <div class="message-text">
+                Hey there 🤗 <br> How can I help you today ?
+            </div>
+        </div>
+        <div class="message user-message">
+            <div class="message-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit
+            </div>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <form action="#" class="chat-form">
+            <textarea placeholder="Message..." class="message-input"></textarea>
+            <div class="chat-controls">
+                <button type="button" class="material-symbols-rounded">sentiment_satisfied</button>
+                <button type="button" class="material-symbols-rounded">attach_file</button>
+                <button type="submit" class="material-symbols-rounded">arrow_upward</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="code.js"></script>
+</html>
