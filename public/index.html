@@ -1,50 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI CHat Bot</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moroccan Darija Chatbot</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="chatbot-popup">
+  <main class="container">
+    <div class="chat-container">
+      <h1 class="title">
+        <span class="title-highlight">Darija</span> Chatbot
+      </h1>
+      
+      <div class="chat-interface">
         <div class="chat-header">
-            <div class="header-info">
-                <box-icon type='solid' name='face'></box-icon>
-                <h2 class="logo-text">Chatbot</h2>
+          <div class="chat-header-left">
+            <div class="avatar">
+              <div class="avatar-fallback">🇲🇦</div>
             </div>
-            <button class="material-symbols-rounded">
-                keyboard_arrow_down
-                </button>
+            <span class="bot-name">Darija Assistant</span>
+          </div>
+          
+          <div class="header-actions">
+            <button id="clear-chat" class="clear-button" title="Clear chat history">
+              <i data-lucide="trash-2"></i>
+            </button>
+            <div class="language-selector">
+              <select id="language-select">
+                <option value="darija">Darija</option>
+                <option value="french">Français</option>
+                <option value="msa">العربية الفصحى</option>
+              </select>
+              <i data-lucide="languages"></i>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="chat-body">
-        <div class="message bot-message">
-            <box-icon type='solid' name='face'></box-icon>
-            <div class="message-text">
-                Hey there 🤗 <br> How can I help you today ?
-            </div>
+        
+        <div class="chat-messages" id="chat-messages">
+          <div class="welcome-message" id="welcome-message">
+            <div class="welcome-emoji">🇲🇦</div>
+            <p class="welcome-text">Salam! Ana hna bash n3awnk.</p>
+            <p class="welcome-subtext">I'm here to help you in Darija, French, or MSA.</p>
+          </div>
         </div>
-        <div class="message user-message">
-            <div class="message-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit
-            </div>
+        
+        <div id="error-container" class="error-container hidden">
+          <p>An error occurred. Please try again.</p>
+          <pre id="error-details"></pre>
         </div>
-    </div>
-    <div class="chat-footer">
-        <form action="#" class="chat-form">
-            <textarea placeholder="Message..." class="message-input"></textarea>
-            <div class="chat-controls">
-                <button type="button" class="material-symbols-rounded">sentiment_satisfied</button>
-                <button type="button" class="material-symbols-rounded">attach_file</button>
-                <button type="submit" class="material-symbols-rounded">arrow_upward</button>
+        
+        <div class="chat-input-container">
+          <form id="chat-form">
+            <div class="image-preview-container" id="image-preview-container">
+              <!-- Image previews will be inserted here -->
             </div>
-        </form>
+            <div class="input-row">
+              <label for="image-upload" class="image-upload-label" title="Upload image">
+                <i data-lucide="image"></i>
+                <span class="sr-only">Upload image</span>
+              </label>
+              <input 
+                type="file" 
+                id="image-upload" 
+                accept="image/*" 
+                class="hidden"
+              >
+              <input 
+                type="text" 
+                id="chat-input" 
+                placeholder="Kteb message dyalek hna..." 
+                autocomplete="off"
+              >
+              <button type="submit" id="send-button">
+                <i data-lucide="send"></i>
+                <span class="sr-only">Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </main>
+  
+  <script src="script.js"></script>
 </body>
-<script src="code.js"></script>
 </html>
