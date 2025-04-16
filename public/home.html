@@ -67,6 +67,48 @@
               </div>
             </div>
         </section>
+
+        <section class="full-text">
+          <h1>Expenence the full power an Al content generator nat delivers premium results in seconds.</h1>
+          <button class="btn-cards">Get Started</button>
+        </section>
+
+        <section class="faq" id="faq">
+
+          <h2>Frequently Asked Questions</h2>
+          <h1>Everything you need to know about the product and billing.</h1>
+          <div class="faq-item">
+            <h3 class="faq-title">What can the AI chatbot do?</h3>
+            <p class="faq-description" style="display: none;">
+              The AI chatbot can answer your questions, provide recommendations, and assist with various tasks.
+            </p>
+          </div>
+       
+          <div class="faq-item">
+            <h3 class="faq-title">How do I get started?</h3>
+            <p class="faq-description" style="display: none;">
+              Simply click "Get Started" to begin your conversation with the AI chatbot.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-title">Is it available 24/7?</h3>
+            <p class="faq-description" style="display: none;">
+              Yes, the AI chatbot is available 24/7 to assist you.
+            </p>
+          </div>
+        </section>
+
+        <script>
+          const faqTitles = document.querySelectorAll('.faq-title');
+          faqTitles.forEach(title => {
+            title.addEventListener('click', () => {
+              const description = title.nextElementSibling;
+              const isVisible = description.style.display === 'block';
+              description.style.display = isVisible ? 'none' : 'block';
+              title.classList.toggle('act', !isVisible);
+            });
+          });
+        </script>
     </main>
 </body>
 </html>
