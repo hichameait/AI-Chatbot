@@ -250,7 +250,7 @@ header {
   flex-direction: column;
   align-items: center;
   align-content: space-around;
-  padding: 4rem;
+  padding: 1rem;
 }
 .cards-down .cards {
   display: flex;
@@ -517,9 +517,14 @@ header {
   }
   
   .cards-down .cards {
-    width: 90%;
+    width: 85%;
   }
-  
+  .btn-cards2 {
+    width: 30%;
+  }
+  .cards-down .cards {
+    padding: 1rem;
+  }
   .full-text {
     padding: 2rem;
     height: auto;
