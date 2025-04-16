@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>AI CHATBOT 🇲🇦</title>
+    <title>SpakAI 🇲🇦</title>
     <link rel="stylesheet" href="./app.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
           <a href="index.html">
-            <span class="logo-icon"><i class="fas fa-bus-alt"></i></span>
-            <span class="logo-text">MAGICAI</span>
+            <span class="logo-icon"><i class="fa-solid fa-robot"></i></span>
+            <span class="logo-text">SpakAI</span>
           </a>
         </div>
         <div class="menu-toggle" id="menu-toggle">
@@ -97,8 +97,27 @@
             </p>
           </div>
         </section>
-
+        <section class="app-ft">
+          <div class="app-card">
+            <div class="crad-appg">
+              <h2>The Future is Now, Old Man</h2>
+              <p>Write 10x faster, engage your audience, & never struggle with the blank page again.</p>
+              <button  class="btn-cards3">Get Started Free</button>
+            </div>
+            <img src="./img/footer.webp" alt="">
+          </div>
+          </div>
+        </section>
         <script>
+          const menuToggle=document.getElementById("menu-toggle")
+          const navLinks=document.getElementById("nav-links")
+
+          function toggleMenu(){
+            navLinks.classList.toggle("active")
+          }
+          if(menuToggle){
+    menuToggle.addEventListener("click",toggleMenu)
+  }
           const faqTitles = document.querySelectorAll('.faq-title');
           faqTitles.forEach(title => {
             title.addEventListener('click', () => {
@@ -109,6 +128,39 @@
             });
           });
         </script>
+
     </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>We are dedicated to providing innovative AI solutions that transform your workflows and deliver premium results.</p>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="#features">Features</a></p>
+          <p><a href="#faq">FAQ</a></p>
+          <p><a href="#contact">Contact</a></p>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact</h3>
+          <p>Email: support@SpakAI.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 SpakAI. All rights reserved.
+      </div>
+    </footer>
 </body>
 </html>
